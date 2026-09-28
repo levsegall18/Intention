@@ -6,14 +6,75 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C94A18833069252A005B90C9 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94A18823069252A005B90C9 /* WidgetKit.framework */; };
+		C94A18853069252A005B90C9 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94A18843069252A005B90C9 /* SwiftUI.framework */; };
+		C94A189630692530005B90C9 /* IntentionWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C94A18803069252A005B90C9 /* IntentionWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C94A189430692530005B90C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C94A1866306924BB005B90C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C94A187F3069252A005B90C9;
+			remoteInfo = IntentionWidgetExtensionExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C94A189B30692530005B90C9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				C94A189630692530005B90C9 /* IntentionWidgetExtensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C94A186E306924BB005B90C9 /* Intention.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Intention.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C94A18803069252A005B90C9 /* IntentionWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = IntentionWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C94A18823069252A005B90C9 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C94A18843069252A005B90C9 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		C94A189D306926F2005B90C9 /* IntentionWidgetExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IntentionWidgetExtensionExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C94A189730692530005B90C9 /* Exceptions for "IntentionWidgetExtension" folder in "IntentionWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C94A187F3069252A005B90C9 /* IntentionWidgetExtensionExtension */;
+		};
+		C94A18A330692F9E005B90C9 /* Exceptions for "Intention" folder in "IntentionWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Goal.swift,
+				GoalStore.swift,
+			);
+			target = C94A187F3069252A005B90C9 /* IntentionWidgetExtensionExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C94A1870306924BB005B90C9 /* Intention */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C94A18A330692F9E005B90C9 /* Exceptions for "Intention" folder in "IntentionWidgetExtensionExtension" target */,
+			);
 			path = Intention;
+			sourceTree = "<group>";
+		};
+		C94A18863069252A005B90C9 /* IntentionWidgetExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C94A189730692530005B90C9 /* Exceptions for "IntentionWidgetExtension" folder in "IntentionWidgetExtensionExtension" target */,
+			);
+			path = IntentionWidgetExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -24,13 +85,23 @@
 			files = (
 			);
 		};
+		C94A187D3069252A005B90C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				C94A18853069252A005B90C9 /* SwiftUI.framework in Frameworks */,
+				C94A18833069252A005B90C9 /* WidgetKit.framework in Frameworks */,
+			);
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		C94A1865306924BB005B90C9 = {
 			isa = PBXGroup;
 			children = (
+				C94A189D306926F2005B90C9 /* IntentionWidgetExtensionExtension.entitlements */,
 				C94A1870306924BB005B90C9 /* Intention */,
+				C94A18863069252A005B90C9 /* IntentionWidgetExtension */,
+				C94A18813069252A005B90C9 /* Frameworks */,
 				C94A186F306924BB005B90C9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,8 +110,18 @@
 			isa = PBXGroup;
 			children = (
 				C94A186E306924BB005B90C9 /* Intention.app */,
+				C94A18803069252A005B90C9 /* IntentionWidgetExtensionExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C94A18813069252A005B90C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C94A18823069252A005B90C9 /* WidgetKit.framework */,
+				C94A18843069252A005B90C9 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -53,8 +134,12 @@
 				C94A186A306924BB005B90C9 /* Sources */,
 				C94A186B306924BB005B90C9 /* Frameworks */,
 				C94A186C306924BB005B90C9 /* Resources */,
+				C94A189B30692530005B90C9 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
+			);
+			dependencies = (
+				C94A189530692530005B90C9 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				C94A1870306924BB005B90C9 /* Intention */,
@@ -63,6 +148,24 @@
 			productName = Intention;
 			productReference = C94A186E306924BB005B90C9 /* Intention.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C94A187F3069252A005B90C9 /* IntentionWidgetExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C94A189830692530005B90C9 /* Build configuration list for PBXNativeTarget "IntentionWidgetExtensionExtension" */;
+			buildPhases = (
+				C94A187C3069252A005B90C9 /* Sources */,
+				C94A187D3069252A005B90C9 /* Frameworks */,
+				C94A187E3069252A005B90C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				C94A18863069252A005B90C9 /* IntentionWidgetExtension */,
+			);
+			name = IntentionWidgetExtensionExtension;
+			productName = IntentionWidgetExtensionExtension;
+			productReference = C94A18803069252A005B90C9 /* IntentionWidgetExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -75,6 +178,9 @@
 				LastUpgradeCheck = 2700;
 				TargetAttributes = {
 					C94A186D306924BB005B90C9 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					C94A187F3069252A005B90C9 = {
 						CreatedOnToolsVersion = 27.0;
 					};
 				};
@@ -94,12 +200,18 @@
 			projectRoot = "";
 			targets = (
 				C94A186D306924BB005B90C9 /* Intention */,
+				C94A187F3069252A005B90C9 /* IntentionWidgetExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C94A186C306924BB005B90C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		C94A187E3069252A005B90C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
 			);
@@ -112,7 +224,20 @@
 			files = (
 			);
 		};
+		C94A187C3069252A005B90C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C94A189530692530005B90C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C94A187F3069252A005B90C9 /* IntentionWidgetExtensionExtension */;
+			targetProxy = C94A189430692530005B90C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C94A1877306924BE005B90C9 /* Debug configuration for PBXProject "Intention" */ = {
@@ -239,8 +364,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Intention/Intention.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RBD7RHWNRV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -248,6 +375,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -255,6 +383,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lev.Intention;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -270,8 +399,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Intention/Intention.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RBD7RHWNRV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -279,6 +410,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -286,9 +418,76 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lev.Intention;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C94A189930692530005B90C9 /* Debug configuration for PBXNativeTarget "IntentionWidgetExtensionExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = IntentionWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RBD7RHWNRV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IntentionWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = IntentionWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lev.Intention.IntentionWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C94A189A30692530005B90C9 /* Release configuration for PBXNativeTarget "IntentionWidgetExtensionExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = IntentionWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RBD7RHWNRV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IntentionWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = IntentionWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lev.Intention.IntentionWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -312,6 +511,14 @@
 			buildConfigurations = (
 				C94A187A306924BE005B90C9 /* Debug configuration for PBXNativeTarget "Intention" */,
 				C94A187B306924BE005B90C9 /* Release configuration for PBXNativeTarget "Intention" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		C94A189830692530005B90C9 /* Build configuration list for PBXNativeTarget "IntentionWidgetExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C94A189930692530005B90C9 /* Debug configuration for PBXNativeTarget "IntentionWidgetExtensionExtension" */,
+				C94A189A30692530005B90C9 /* Release configuration for PBXNativeTarget "IntentionWidgetExtensionExtension" */,
 			);
 			defaultConfigurationName = Release;
 		};
